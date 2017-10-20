@@ -1,4 +1,4 @@
 # Simple Transformations 
 * Translate (Keyboard arrows) 
-* Rotate (R, L))
+* Rotate (R, L)
 * Scale (B, S)
