@@ -20,7 +20,7 @@ void processInput(GLFWwindow *window);
 // settings
 const unsigned int SCR_WIDTH = 800;
 const unsigned int SCR_HEIGHT = 600;
-float x = 0, y = 0, dir = 1.0f, s = 1.0f;
+float x = 0, y = 0, dir = 1.0f, s = 1.0f, r = 0;
 int main()
 {
 	// glfw: initialize and configure
@@ -136,7 +136,7 @@ int main()
 		// create transformations
 		glm::mat4 transform = glm::mat4(1.0f);;
 		transform = glm::translate(transform, glm::vec3(x, y, 0.0f));
-		transform = glm::rotate(transform, (float)glfwGetTime(), glm::vec3(0.0f, 0.0f, dir));
+		transform = glm::rotate(transform, dir * r, glm::vec3(0.0f, 0.0f, dir));//(float)glfwGetTime()
 		transform = glm::scale(transform, glm::vec3(s, s, 1.0f));
 
 		// get matrix's uniform location and set matrix
@@ -200,9 +200,11 @@ void processInput(GLFWwindow *window)
 	}
 
 	else if (glfwGetKey(window, GLFW_KEY_R) == GLFW_PRESS) {
+		r -= 0.005f;
 		dir = -1.0f;
 	}
 	else if (glfwGetKey(window, GLFW_KEY_L) == GLFW_PRESS) {
+		r += 0.005f;
 		dir = 1.0f;
 	}
 
