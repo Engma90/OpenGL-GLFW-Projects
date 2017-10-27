@@ -1,0 +1,7 @@
+﻿  Game.cpp
+c:\users\mohamed\documents\visual studio 2015\projects\cargame2d\cargame2d\opengl stuff\include\shader.h(65): warning C4101: 'infoLog': unreferenced local variable
+c:\users\mohamed\documents\visual studio 2015\projects\cargame2d\cargame2d\opengl stuff\include\shader.h(64): warning C4101: 'success': unreferenced local variable
+c:\program files (x86)\windows kits\8.1\include\shared\minwindef.h(130): warning C4005: 'APIENTRY': macro redefinition
+  c:\users\mohamed\documents\visual studio 2015\projects\cargame2d\cargame2d\opengl stuff\include\glfw\glfw3.h(98): note: see previous definition of 'APIENTRY'
+  CarGame2D.vcxproj -> C:\Users\Mohamed\documents\visual studio 2015\Projects\CarGame2D\Debug\CarGame2D.exe
+  CarGame2D.vcxproj -> C:\Users\Mohamed\documents\visual studio 2015\Projects\CarGame2D\Debug\CarGame2D.pdb (Partial PDB)
