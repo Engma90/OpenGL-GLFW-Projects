@@ -145,7 +145,7 @@ int main(int argc, char** argv)
 	glutInitWindowSize(400, 400);
 	glutInitWindowPosition(100, 100);
 
-	model.load("spaceship.obj");
+	
 	
 	glutCreateWindow("wavefront file loader ");
 	glEnable(GL_DEPTH_TEST);
@@ -174,6 +174,7 @@ int main(int argc, char** argv)
 
 	glColor3f(1, 1, 1);
 	glClearColor(0, 0, 0, 1);
+	model.load("spaceship.obj");
 	CreateTexture(id, "spaceship.bmp");
 	glutDisplayFunc(display);
 
