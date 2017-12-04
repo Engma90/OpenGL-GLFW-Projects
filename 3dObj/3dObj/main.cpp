@@ -1,15 +1,3 @@
-/* »”„ «··Â «·—Õ„‰ «·—ÕÌ„
-
-„À«· ⁄·Ï  Õ„Ì· «·„Ã”„« 
-@purpose : wavefront obj loader ..
-@properties: support vertex loading + texture coordinates loading
-+ normal coordinates loading .
-@missing: -there is no supporting for material loading .
--ignore "groups" propery,in obj files .
-
-@Abdullah AlShammari - aboshammar@windowslive.com
-
-*/
 #include<windows.h>
 #include<GL/glut.h>
 #include<gl/glaux.h>
