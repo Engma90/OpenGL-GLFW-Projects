@@ -1,7 +1,4 @@
 ﻿  main.cpp
-d:\faculty\1st\g\git\opengl-glfw-projects\3dobj\3dobj\main.cpp(74): warning C4018: '<': signed/unsigned mismatch
-d:\faculty\1st\g\git\opengl-glfw-projects\3dobj\3dobj\main.cpp(145): warning C4838: conversion from 'double' to 'GLfloat' requires a narrowing conversion
-d:\faculty\1st\g\git\opengl-glfw-projects\3dobj\3dobj\main.cpp(146): warning C4838: conversion from 'double' to 'GLfloat' requires a narrowing conversion
-d:\faculty\1st\g\git\opengl-glfw-projects\3dobj\3dobj\main.cpp(147): warning C4838: conversion from 'double' to 'GLfloat' requires a narrowing conversion
+d:\faculty\1st\g\git\opengl-glfw-projects\3dobj\3dobj\main.cpp(110): warning C4018: '<': signed/unsigned mismatch
   3dObj.vcxproj -> D:\Faculty\1st\G\Git\OpenGL-GLFW-Projects\3dObj\Debug\3dObj.exe
   3dObj.vcxproj -> D:\Faculty\1st\G\Git\OpenGL-GLFW-Projects\3dObj\Debug\3dObj.pdb (Partial PDB)

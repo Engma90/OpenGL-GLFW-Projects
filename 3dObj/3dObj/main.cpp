@@ -52,6 +52,42 @@ void charKey(unsigned char k, int x, int y)
 	}
 }
 
+
+void text()
+{
+	char menu[80];
+	strcpy(menu, "SpaceShip");
+	int len;
+	len = strlen(menu);
+
+	glColor4f(1, 1, 1, 1);
+
+	glMatrixMode(GL_PROJECTION);
+	glPushMatrix();
+	glLoadIdentity();
+
+	gluOrtho2D(0, 600, 0, 600);
+
+	glMatrixMode(GL_MODELVIEW);
+	glPushMatrix();
+
+	glLoadIdentity();
+
+	glRasterPos2i(230, 500);
+
+
+	for (int i = 0; i < len; ++i)
+	{
+		glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, menu[i]);
+	}
+
+	glPopMatrix();
+
+	glMatrixMode(GL_PROJECTION);
+	glPopMatrix();
+	glMatrixMode(GL_MODELVIEW);
+}
+
 float angle = 0;
 void display(void)
 {
@@ -109,6 +145,9 @@ void display(void)
 		}
 	}
 	glEnd();
+
+	text();
+
 	glutPostRedisplay();
 	glutSwapBuffers();
 }
@@ -125,6 +164,11 @@ void reshape(int w, int h)
 
 }
 
+
+
+
+
+
 int main(int argc, char** argv)
 {
 
@@ -138,24 +182,24 @@ int main(int argc, char** argv)
 	glutCreateWindow("wavefront file loader ");
 	glEnable(GL_DEPTH_TEST);
 
-	//glEnable(GL_LIGHT0);
-	//glEnable(GL_LIGHTING);
-	//glEnable(GL_COLOR_MATERIAL);
-
-	GLfloat amb_light[] = { 0.91, 0.91, 0.91, 1.0 };
-	GLfloat diffuse[] = { 0.6, 0.6, 0.6, 1 };
-	GLfloat specular[] = { 0.7, 0.7, 0.3, 1 };
-	glLightModelfv(GL_LIGHT_MODEL_AMBIENT, amb_light);
-	glLightfv(GL_LIGHT0, GL_DIFFUSE, diffuse);
-	glLightfv(GL_LIGHT0, GL_SPECULAR, specular);
 	glEnable(GL_LIGHT0);
-	glEnable(GL_COLOR_MATERIAL);
-	glShadeModel(GL_SMOOTH);
-	glLightModeli(GL_LIGHT_MODEL_TWO_SIDE, GL_FALSE);
-	glDepthFunc(GL_LEQUAL);
-	glEnable(GL_DEPTH_TEST);
 	glEnable(GL_LIGHTING);
-	glEnable(GL_LIGHT0);
+	glEnable(GL_COLOR_MATERIAL);
+
+	//GLfloat amb_light[] = { 0.91, 0.91, 0.91, 1.0 };
+	//GLfloat diffuse[] = { 0.6, 0.6, 0.6, 1 };
+	//GLfloat specular[] = { 0.7, 0.7, 0.3, 1 };
+	//glLightModelfv(GL_LIGHT_MODEL_AMBIENT, amb_light);
+	//glLightfv(GL_LIGHT0, GL_DIFFUSE, diffuse);
+	//glLightfv(GL_LIGHT0, GL_SPECULAR, specular);
+	//glEnable(GL_LIGHT0);
+	//glEnable(GL_COLOR_MATERIAL);
+	//glShadeModel(GL_SMOOTH);
+	//glLightModeli(GL_LIGHT_MODEL_TWO_SIDE, GL_FALSE);
+	//glDepthFunc(GL_LEQUAL);
+	//glEnable(GL_DEPTH_TEST);
+	//glEnable(GL_LIGHTING);
+	//glEnable(GL_LIGHT0);
 
 
 
